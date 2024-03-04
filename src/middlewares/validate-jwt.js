@@ -20,7 +20,7 @@ export const validateJWT = async (req, res, next) => {
     }
     if (!user.state) {
       return res.status(401).json({
-        msg: 'Invalid token - user has the state: false',
+        msg: 'Invalid token',
       });
     }
 

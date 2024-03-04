@@ -48,3 +48,43 @@ export const userGet = async (req, res) => {
   ]);
   res.status(200).json({ total, users });
 };
+
+//Put method
+export const userPut = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { username, email, oldPass, newPass } = req.body;
+    const userAuth = req.user;
+    const idMatch = userAuth._id.toString() === id;
+    const authPermit = userAuth.role === 'USER_ROLE';
+
+    if (!idMatch || !authPermit) {
+      return res.status(403).json({ msg: 'You do not have permission' });
+    }
+
+    if (!oldPass || !newPass) {
+      return res.status(400).json({ msg: 'Provide old and new password' });
+    }
+
+    const user = await User.findById(id);
+    if (!user) return res.status(400).json({ msg: 'User not found' });
+
+    //Check current password
+    const passValid = bcryptjs.compareSync(oldPass, user.password);
+    if (!passValid) return res.status(400).json({ msg: 'Invalid password' });
+
+    if (username) user.username = username;
+
+    if (email) user.email = email;
+    //Hash the new password
+    const passHash = bcryptjs.hashSync(newPass, 10);
+    user.password = passHash;
+
+    await user.save();
+
+    res.status(200).json({ msg: 'Profile updated', user });
+  } catch (e) {
+    console.log(e);
+    res.status(500).json({ msg: 'Unexpected Error' });
+  }
+};

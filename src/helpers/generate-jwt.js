@@ -7,7 +7,7 @@ export const jwtGenerate = (uid = '') => {
       payload,
       process.env.JWT_SECRET,
       {
-        expiresIn: '1h',
+        expiresIn: '2h',
       },
       (err, token) => {
         err
