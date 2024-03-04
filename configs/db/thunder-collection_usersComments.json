@@ -1,0 +1,71 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "usersComments",
+    "dateExported": "2024-03-04T04:49:58.126Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "248a7b0b-c314-4810-9f55-f97e88ea1ec3",
+            "colId": "aa37491a-69e1-4fb1-89b0-b57cba6379db",
+            "containerId": "",
+            "name": "registerUsers",
+            "url": "http://localhost:3000/commentsAPI/v1/auth/register",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-04T04:26:02.830Z",
+            "modified": "2024-03-04T04:44:31.383Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"2\",\n  \"email\": \"2@gmail.com\",\n  \"password\": \"222222\"\n  \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "76def5ae-e3a6-4055-b60d-cf17bf8189ba",
+            "colId": "aa37491a-69e1-4fb1-89b0-b57cba6379db",
+            "containerId": "",
+            "name": "loginUsers",
+            "url": "http://localhost:3000/commentsAPI/v1/auth/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-04T04:32:53.373Z",
+            "modified": "2024-03-04T04:33:19.356Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"1@gmail.com\",\n  \"password\": \"111111\"\n  \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "d23d5bae-384c-44f1-9fdf-38731598f981",
+            "colId": "aa37491a-69e1-4fb1-89b0-b57cba6379db",
+            "containerId": "",
+            "name": "userPut",
+            "url": "http://localhost:3000/commentsAPI/v1/users/65e54ec6854899fa7d786cf8",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-03-04T04:34:06.112Z",
+            "modified": "2024-03-04T04:37:59.459Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU1NGVjNjg1NDg5OWZhN2Q3ODZjZjgiLCJpYXQiOjE3MDk1MjY4MDEsImV4cCI6MTcwOTUzNDAwMX0.zhU1N5XcfYqRW-rXY227RMRyQeIQ60zQMj_MKXyOvtE"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"111\",\n  \"email\": \"1@gmail.com\",\n  \"oldPass\": \"eskere123\",\n  \"newPass\": \"111111\"\n  \n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

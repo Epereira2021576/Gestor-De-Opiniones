@@ -21,3 +21,5 @@ router.post(
 );
 
 router.put('/:createdAt', [validateJWT, validateFields, updatePost]);
+
+export default router;

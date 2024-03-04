@@ -1,6 +1,6 @@
-import User from '../users/user.model';
+import User from '../users/user.model.js';
 import bcryptjs from 'bcryptjs';
-import { jwtGenerate } from '../helpers/generate-jwt';
+import { jwtGenerate } from '../helpers/generate-jwt.js';
 
 export const register = async (req, res) => {
   const { username, email, password, role } = req.body;

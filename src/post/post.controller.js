@@ -1,5 +1,5 @@
 import Post from './post.model.js';
-import UserHasComment from './userHasComment.model.js';
+import UserHasComment from '../users/userHasComment.model.js';
 
 export const createPost = async (req, res) => {
   try {

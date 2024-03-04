@@ -40,4 +40,4 @@ postSchema.methods.toJSON = function () {
   return post;
 };
 
-module.exports = mongoose.model('Post', postSchema);
+export default mongoose.model('Post', postSchema);

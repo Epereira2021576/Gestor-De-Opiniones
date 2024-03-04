@@ -1,0 +1,57 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "postsComments",
+    "dateExported": "2024-03-04T04:50:23.843Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "48099462-77f0-46d7-906b-b90b8ea166b5",
+            "colId": "fc24b5c6-b6f1-4b58-a18d-50f1c3153271",
+            "containerId": "",
+            "name": "postPost",
+            "url": "http://localhost:3000/commentsAPI/v1/posts/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-04T04:38:26.504Z",
+            "modified": "2024-03-04T04:41:33.909Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU1NGVjNjg1NDg5OWZhN2Q3ODZjZjgiLCJpYXQiOjE3MDk1MjY4MDEsImV4cCI6MTcwOTUzNDAwMX0.zhU1N5XcfYqRW-rXY227RMRyQeIQ60zQMj_MKXyOvtE"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"hola\",\n  \"category\": \"skibidi pomni rizz ohio sigma kai cenat\",\n  \"description\": \"no lo siento\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2e3805a2-ada0-4a3e-852c-526eae6af759",
+            "colId": "fc24b5c6-b6f1-4b58-a18d-50f1c3153271",
+            "containerId": "",
+            "name": "commentPost",
+            "url": "http://localhost:3000/commentsAPI/v1/posts/commentPost/65e551b0854899fa7d786d0a",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-04T04:43:35.087Z",
+            "modified": "2024-03-04T04:47:39.895Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU1NGVjNjg1NDg5OWZhN2Q3ODZjZjgiLCJpYXQiOjE3MDk1MjY4MDEsImV4cCI6MTcwOTUzNDAwMX0.zhU1N5XcfYqRW-rXY227RMRyQeIQ60zQMj_MKXyOvtE"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n    \"postId\": \"65e550ff854899fa7d786d07\",\r\n    \"title\":\"jajaja\",\r\n    \"description\":\"frionel pesi\"\r\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
