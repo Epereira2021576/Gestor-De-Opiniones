@@ -12,6 +12,12 @@ const UserSchema = mongoose.Schema({
   password: { type: String, required: [true, 'Password required'] },
 
   state: { type: Boolean, default: true },
+
+  role: {
+    type: String,
+    enum: ['USER_ROLE'],
+    default: 'USER_ROLE',
+  },
 });
 
 UserSchema.methods.toJSON = function () {
